@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DP Ar Condicionado | Instalação, Manutenção e Higienização de Ar-Condicionado em Araçatuba</title>
+    <meta name="description" content="DP Ar Condicionado em Araçatuba - SP. Conforto que você sente, qualidade que você confia! Especialistas em Instalação, Manutenção, Limpeza e Higienização de Ar-Condicionado.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat (Geometric Bold/Italic for Flyer Headings) & Inter (Clean UI Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        rh: {
+                            darkest: '#030b18',
+                            navy: '#06152d',
+                            panel: '#0a2246',
+                            card: '#0d2b59',
+                            blue: '#1664b8',
+                            cyan: '#2997ff',
+                            ice: '#60beff',
+                            frost: '#dff2ff',
+                        }
+                    },
+                    boxShadow: {
+                        'flyer-card': '0 8px 30px -4px rgba(0, 14, 38, 0.7), inset 0 1px 1px 0 rgba(96, 190, 255, 0.25)',
+                        'flyer-icon': '0 4px 15px rgba(22, 100, 184, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.35)',
+                        'cyan-glow': '0 0 25px rgba(41, 151, 255, 0.45)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg-deep: #041022;
+            --bg-navy: #092147;
+            --accent-cyan: #2997ff;
+            --accent-ice: #60beff;
+        }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #041022;
+            color: #ffffff;
+            background-image: 
+                radial-gradient(circle at 18% 15%, rgba(25, 110, 205, 0.28) 0%, transparent 45%),
+                radial-gradient(circle at 82% 22%, rgba(41, 151, 255, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(14, 65, 130, 0.3) 0%, transparent 60%),
+                linear-gradient(180deg, #040e20 0%, #071936 50%, #040e20 100%);
+        }
+
+        /* Metallic White-Silver R & Ice Blue H Effect from Flyer */
+        .logo-r-metallic {
+            background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 48%, #94a3b8 52%, #f8fafc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+        }
+
+        .logo-h-cyan {
+            background: linear-gradient(180deg, #67e8f9 0%, #2997ff 45%, #0284c7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 4px 10px rgba(2, 132, 199, 0.5));
+        }
+
+        /* Exact Flyer Service Card Look */
+        .flyer-service-card {
+            background: linear-gradient(90deg, rgba(10, 34, 70, 0.92) 0%, rgba(7, 23, 48, 0.85) 100%);
+            border: 1.5px solid rgba(71, 163, 255, 0.45);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), inset 0 0 18px rgba(41, 151, 255, 0.12);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @media (hover: hover) {
+            .flyer-service-card:hover {
+                transform: translateX(6px) translateY(-2px);
+                border-color: rgba(103, 232, 249, 0.85);
+                box-shadow: 0 14px 32px -5px rgba(41, 151, 255, 0.35), inset 0 0 22px rgba(41, 151, 255, 0.22);
+            }
+        }
+
+        .flyer-service-card:active {
+            transform: scale(0.985);
+            border-color: rgba(103, 232, 249, 0.9);
+        }
+
+        /* Touch-friendly range sliders for mobile */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: rgba(6, 21, 45, 0.9);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            height: 10px;
+            border-radius: 999px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #2997ff;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 12px rgba(41, 151, 255, 0.8);
+            cursor: pointer;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #2997ff;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 12px rgba(41, 151, 255, 0.8);
+            cursor: pointer;
+        }
+
+        /* Exact Flyer Left Icon Box Look */
+        .flyer-icon-box {
+            background: radial-gradient(circle at 30% 25%, #38bdf8 0%, #1664b8 55%, #0a346b 100%);
+            border: 1.5px solid rgba(147, 213, 255, 0.65);
+            box-shadow: 0 6px 16px rgba(10, 52, 107, 0.8), inset 0 2px 6px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Pill Phone Bar from Flyer */
+        .flyer-phone-pill {
+            background: linear-gradient(90deg, #1b74d0 0%, #092652 24%, #061836 100%);
+            border: 1.5px solid rgba(82, 174, 255, 0.55);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+        }
+
+        /* Trust Badges Bar from Flyer */
+        .flyer-trust-bar {
+            background: linear-gradient(180deg, rgba(11, 39, 79, 0.85) 0%, rgba(6, 21, 45, 0.92) 100%);
+            border: 1.5px solid rgba(64, 156, 255, 0.45);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(41, 151, 255, 0.15);
+        }
+
+        /* Cool Air Breeze Mist Animation */
+        @keyframes airFlowStream {
+            0% {
+                opacity: 0;
+                transform: translateY(-10px) translateX(10px) scaleX(0.8);
+            }
+            40% {
+                opacity: 0.65;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(140px) translateX(-45px) scaleX(1.35);
+            }
+        }
+
+        .air-breeze-ray {
+            animation: airFlowStream 3.4s infinite ease-out;
+        }
+
+        .air-breeze-ray-2 {
+            animation: airFlowStream 4.1s infinite ease-out 1.1s;
+        }
+
+        .air-breeze-ray-3 {
+            animation: airFlowStream 3.7s infinite ease-out 2.2s;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030b18;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1664b8;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2997ff;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-rh-cyan selection:text-white">
+
+    <!-- Top Location & Urgency Strip -->
+    <div class="bg-gradient-to-r from-[#041229] via-[#0c3166] to-[#041229] border-b border-rh-cyan/30 text-[11px] sm:text-sm py-2 px-3 sm:px-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center md:justify-between gap-2 text-center md:text-left">
+            <div class="flex items-center justify-center gap-2 text-rh-frost font-medium">
+                <span class="relative flex h-2.5 w-2.5 flex-shrink-0">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
+                </span>
+                <span>Atendimento Rápido em <strong>Araçatuba - SP</strong> e Região <span class="hidden sm:inline">• Residencial e Comercial</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-6 text-sky-200">
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-rh-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    Garantia Total no Serviço
+                </span>
+                <span class="flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-rh-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    Pontualidade e Limpeza
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#041022]/90 border-b border-sky-400/25 shadow-lg">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+            <!-- Brand Logo (Recreated from Flyer) -->
+            <a href="#inicio" class="flex items-center gap-2 sm:gap-3 group focus:outline-none min-w-0">
+                <div class="relative flex items-center flex-shrink-0">
+                    <!-- Half Snowflake Icon -->
+                    <svg class="w-8 h-8 sm:w-10 sm:h-10 text-sky-400 -mr-1.5 transition-transform duration-500 group-hover:rotate-12" viewBox="0 0 64 64" fill="none">
+                        <g stroke="currentColor" stroke-width="3.5" stroke-linecap="round">
+                            <line x1="32" y1="6" x2="32" y2="58"/>
+                            <line x1="32" y1="14" x2="23" y2="8"/>
+                            <line x1="32" y1="14" x2="41" y2="8"/>
+                            <line x1="32" y1="50" x2="23" y2="56"/>
+                            <line x1="32" y1="50" x2="41" y2="56"/>
+                            <line x1="10" y1="19" x2="32" y2="32"/>
+                            <line x1="17" y1="23" x2="15" y2="13"/>
+                            <line x1="17" y1="23" x2="8" y2="26"/>
+                            <line x1="10" y1="45" x2="32" y2="32"/>
+                            <line x1="17" y1="41" x2="8" y2="38"/>
+                            <line x1="17" y1="41" x2="15" y2="51"/>
+                        </g>
+                    </svg>
+                    <div class="leading-none">
+                        <div class="flex items-baseline font-display font-black italic text-2xl sm:text-3xl tracking-tighter">
+                            <span class="logo-r-metallic">D</span>
+                            <span class="logo-h-cyan">P</span>
+                        </div>
+                        <!-- Double Wave Swoosh -->
+                        <svg class="w-12 sm:w-16 h-2 sm:h-2.5 -mt-1 text-sky-400" viewBox="0 0 100 18" fill="none">
+                            <path d="M2 12C22 2 45 2 65 10C78 15 90 13 98 6" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round"/>
+                            <path d="M12 16C32 8 52 8 72 14C83 17 92 15 98 10" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex flex-col min-w-0">
+                    <span class="font-display font-black italic tracking-wider text-white text-xs sm:text-base leading-none truncate">AR CONDICIONADO</span>
+                    <span class="text-[10px] sm:text-[11px] text-sky-300 font-semibold tracking-widest uppercase mt-0.5 truncate">Araçatuba • SP</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-200">
+                <a href="#inicio" class="hover:text-rh-cyan transition-colors">Início</a>
+                <a href="#servicos" class="hover:text-rh-cyan transition-colors">Serviços</a>
+                <a href="#higienizacao" class="hover:text-rh-cyan transition-colors">Raio-X Higienização</a>
+                <a href="#calculadora" class="hover:text-rh-cyan transition-colors">Calculadora de BTUs</a>
+                <a href="#aracatuba" class="hover:text-rh-cyan transition-colors">Regiões Atendidas</a>
+                <a href="#orcamento" class="hover:text-rh-cyan transition-colors">Orçamento</a>
+            </nav>
+
+            <!-- CTA Button & Mobile Menu Button -->
+            <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                <a href="#orcamento" class="inline-flex items-center gap-1.5 sm:gap-2.5 px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl font-display font-extrabold italic text-[11px] sm:text-sm uppercase tracking-wide text-white flyer-icon-box active:scale-95 sm:hover:scale-105 transition-transform">
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white animate-bounce flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.27 1.11l-2.18 2.1z"/>
+                    </svg>
+                    <span class="hidden sm:inline">Solicitar Atendimento</span>
+                    <span class="sm:hidden">Orçamento</span>
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileMenuBtn" aria-label="Abrir Menu" aria-expanded="false" class="lg:hidden p-2.5 rounded-xl bg-rh-panel border border-sky-400/40 text-sky-300 hover:text-white active:bg-sky-500/20 transition-colors">
+                    <svg id="menuIconOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg id="menuIconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-[#061631]/98 backdrop-blur-xl border-b border-sky-400/30 px-4 pt-3 pb-6 space-y-2 shadow-2xl">
+            <a href="#inicio" class="mobile-link flex items-center justify-between py-3 px-4 rounded-xl hover:bg-sky-500/15 active:bg-sky-500/25 font-semibold text-slate-100 border border-transparent hover:border-sky-400/20">
+                <span>Início</span>
+                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#servicos" class="mobile-link flex items-center justify-between py-3 px-4 rounded-xl hover:bg-sky-500/15 active:bg-sky-500/25 font-semibold text-slate-100 border border-transparent hover:border-sky-400/20">
+                <span>Nossos Serviços</span>
+                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#higienizacao" class="mobile-link flex items-center justify-between py-3 px-4 rounded-xl hover:bg-sky-500/15 active:bg-sky-500/25 font-semibold text-slate-100 border border-transparent hover:border-sky-400/20">
+                <span>Raio-X da Higienização</span>
+                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#calculadora" class="mobile-link flex items-center justify-between py-3 px-4 rounded-xl hover:bg-sky-500/15 active:bg-sky-500/25 font-semibold text-slate-100 border border-transparent hover:border-sky-400/20">
+                <span>Calculadora de BTUs (Araçatuba)</span>
+                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#aracatuba" class="mobile-link flex items-center justify-between py-3 px-4 rounded-xl hover:bg-sky-500/15 active:bg-sky-500/25 font-semibold text-slate-100 border border-transparent hover:border-sky-400/20">
+                <span>Bairros Atendidos em Araçatuba</span>
+                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <a href="#orcamento" class="mobile-link block py-3.5 px-4 rounded-xl flyer-icon-box text-center font-display font-extrabold italic uppercase text-sm text-white">
+                    Pedir Orçamento no Site
+                </a>
+                <a href="https://wa.me/5518997936585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20DP%20Ar%20Condicionado%20e%20gostaria%20de%20um%20or%C3%A7amento%20em%20Ara%C3%A7atuba!" target="_blank" rel="noopener noreferrer" class="mobile-link flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-emerald-500 text-slate-950 font-display font-black italic uppercase text-sm">
+                    <span>Chamar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (DESIGN SYSTEM REPLICA + INTERACTIVE SHOWCASE) -->
+    <section id="inicio" class="relative pt-5 pb-12 sm:pt-6 sm:pb-14 lg:py-14 overflow-hidden">
+        <!-- Ambient Frost Particles Canvas -->
+        <canvas id="frostCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-65"></canvas>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                
+                <!-- LEFT COLUMN: FLYER BRANDING + 4 SIGNATURE SERVICE CARDS -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- Main Flyer Logo Emblem & Slogan Block -->
+                    <div class="text-center lg:text-left">
+                        <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-400/40 text-sky-300 text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4 max-w-full">
+                            <svg class="w-4 h-4 text-sky-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span class="truncate">Especialista em Climatização em Araçatuba - SP</span>
+                        </div>
+
+                        <!-- Large Flyer Emblem Recreated in Crisp SVG + Typography -->
+                        <div class="flex flex-col items-center lg:items-start">
+                            <div class="relative inline-flex items-center select-none">
+                                <!-- Detailed Left Snowflake Graphic from Flyer -->
+                                <svg class="w-16 h-16 sm:w-28 sm:h-28 text-sky-400 -mr-3 sm:-mr-6 drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]" viewBox="0 0 120 120" fill="none">
+                                    <g stroke="url(#snowGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                                        <!-- Vertical Spine -->
+                                        <line x1="65" y1="10" x2="65" y2="110"/>
+                                        <path d="M52 20 L65 30 L78 20"/>
+                                        <path d="M52 100 L65 90 L78 100"/>
+                                        <!-- Upper Left Arm -->
+                                        <line x1="16" y1="35" x2="65" y2="60"/>
+                                        <path d="M22 50 L32 43 L28 30"/>
+                                        <path d="M38 58 L48 51 L44 38"/>
+                                        <!-- Lower Left Arm -->
+                                        <line x1="16" y1="85" x2="65" y2="60"/>
+                                        <path d="M28 90 L32 77 L22 70"/>
+                                        <path d="M44 82 L48 69 L38 62"/>
+                                        <!-- Horizontal Left Branch -->
+                                        <line x1="8" y1="60" x2="65" y2="60"/>
+                                        <path d="M20 49 L30 60 L20 71"/>
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="snowGrad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0%" stop-color="#bae6fd"/>
+                                            <stop offset="50%" stop-color="#38bdf8"/>
+                                            <stop offset="100%" stop-color="#0284c7"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+
+                                <!-- Giant DP Letters -->
+                                <div class="font-display font-black italic text-6xl sm:text-8xl md:text-9xl tracking-tight leading-none flex items-center">
+                                    <span class="logo-r-metallic pr-1">D</span>
+                                    <span class="logo-h-cyan">P</span>
+                                </div>
+                            </div>
+
+                            <!-- Dual Wave Swooshes Under DP -->
+                            <svg class="w-56 sm:w-80 max-w-full h-6 sm:h-7 -mt-2.5 sm:-mt-4" viewBox="0 0 320 32" fill="none">
+                                <path d="M8 20 C85 -2, 165 -2, 240 18 C275 27, 300 22, 315 8" stroke="url(#wave1)" stroke-width="6" stroke-linecap="round"/>
+                                <path d="M35 27 C105 9, 175 10, 245 25 C278 31, 302 26, 316 15" stroke="url(#wave2)" stroke-width="4.5" stroke-linecap="round"/>
+                                <defs>
+                                    <linearGradient id="wave1" x1="0" y1="0" x2="320" y2="0" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0%" stop-color="#38bdf8"/>
+                                        <stop offset="50%" stop-color="#e0f2fe"/>
+                                        <stop offset="100%" stop-color="#0284c7"/>
+                                    </linearGradient>
+                                    <linearGradient id="wave2" x1="0" y1="0" x2="320" y2="0" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0%" stop-color="#0284c7"/>
+                                        <stop offset="100%" stop-color="#38bdf8"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <!-- AR CONDICIONADO Title -->
+                            <h1 class="font-display font-black italic text-2xl sm:text-5xl text-white tracking-wide uppercase mt-1 drop-shadow-[0_3px_10px_rgba(0,0,0,0.8)]">
+                                AR CONDICIONADO
+                            </h1>
+
+                            <!-- Flyer Slogan -->
+                            <p class="font-display font-extrabold italic text-sm sm:text-xl uppercase tracking-wide mt-2 text-slate-100 leading-snug">
+                                <span class="text-rh-cyan">CONFORTO</span> QUE VOCÊ SENTE, <br class="sm:hidden">
+                                <span class="text-rh-cyan">QUALIDADE</span> QUE VOCÊ CONFIA!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- TRABALHAMOS COM: Header + 4 Exact Flyer Service Cards -->
+                    <div class="space-y-3 sm:space-y-3.5 pt-1 sm:pt-2">
+                        <div class="flex flex-wrap items-center justify-between gap-1">
+                            <h2 class="font-display font-extrabold text-base sm:text-xl uppercase tracking-wider text-white">
+                                TRABALHAMOS COM:
+                            </h2>
+                            <span class="text-[11px] sm:text-xs text-sky-300 font-medium">Toque em um serviço para orçar</span>
+                        </div>
+
+                        <!-- 1. LIMPEZA -->
+                        <div onclick="selectQuickService('Limpeza Técnica')" class="flyer-service-card rounded-2xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 cursor-pointer group">
+                            <div class="flyer-icon-box w-14 h-14 sm:w-20 sm:h-20 rounded-2xl flex-shrink-0 flex items-center justify-center p-2.5 sm:p-3 group-hover:scale-105 transition-transform">
+                                <!-- Spray Bottle & Sparkles SVG (Matching Flyer) -->
+                                <svg class="w-9 h-9 sm:w-11 sm:h-11 text-white" viewBox="0 0 64 64" fill="none">
+                                    <!-- Sparkles/Mist on left -->
+                                    <circle cx="14" cy="22" r="2.2" fill="currentColor"/>
+                                    <circle cx="9" cy="29" r="1.8" fill="currentColor"/>
+                                    <circle cx="16" cy="34" r="2" fill="currentColor"/>
+                                    <path d="M19 26L25 24M19 30L25 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                    <!-- Spray Nozzle & Head -->
+                                    <path d="M31 12H46V18H35L31 23V12Z" fill="currentColor"/>
+                                    <path d="M31 15H26V21" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="35" y="19" width="9" height="5" rx="1" fill="currentColor"/>
+                                    <!-- Bottle Body -->
+                                    <path d="M32 25H47L52 34V52C52 54.2091 50.2091 56 48 56H31C28.7909 56 27 54.2091 27 52V34L32 25Z" stroke="currentColor" stroke-width="3.5" fill="rgba(255,255,255,0.18)"/>
+                                    <path d="M28 42C34 39 45 45 51 42" stroke="currentColor" stroke-width="2.5"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center justify-between gap-2">
+                                    <h3 class="font-display font-black italic text-lg sm:text-2xl text-rh-cyan tracking-wide uppercase truncate">LIMPEZA</h3>
+                                    <span class="text-[11px] sm:text-xs font-semibold text-sky-300/90 group-hover:text-white flex items-center gap-0.5 flex-shrink-0">
+                                        Agendar <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                    </span>
+                                </div>
+                                <p class="text-slate-100 text-xs sm:text-sm leading-relaxed mt-0.5">
+                                    Remoção de poeira, sujeira e impurezas para um ar mais limpo e saudável.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 2. INSTALAÇÃO -->
+                        <div onclick="selectQuickService('Instalação de Ar-Condicionado')" class="flyer-service-card rounded-2xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 cursor-pointer group">
+                            <div class="flyer-icon-box w-14 h-14 sm:w-20 sm:h-20 rounded-2xl flex-shrink-0 flex items-center justify-center p-2.5 sm:p-3 group-hover:scale-105 transition-transform">
+                                <!-- Crossed Wrench & Screwdriver SVG (Matching Flyer) -->
+                                <svg class="w-9 h-9 sm:w-11 sm:h-11 text-white" viewBox="0 0 64 64" fill="none">
+                                    <!-- Wrench -->
+                                    <path d="M22 14C17.5 14 14 17.5 14 22C14 24.4 15.1 26.5 16.8 28L38 49.2C39.5 50.9 41.6 52 44 52C48.5 52 52 48.5 52 44C52 41.6 50.9 39.5 49.2 38L28 16.8C26.5 15.1 24.4 14 22 14Z" stroke="currentColor" stroke-width="3.5" fill="rgba(255,255,255,0.2)"/>
+                                    <circle cx="44" cy="44" r="3" fill="#0d2b59"/>
+                                    <!-- Crossed Screwdriver -->
+                                    <path d="M48 14L52 18L45 25L41 21L48 14Z" fill="currentColor"/>
+                                    <line x1="42" y1="22" x2="26" y2="38" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                                    <rect x="13" y="41" width="16" height="9" rx="4" transform="rotate(-45 13 41)" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center justify-between gap-2">
+                                    <h3 class="font-display font-black italic text-lg sm:text-2xl text-rh-cyan tracking-wide uppercase truncate">INSTALAÇÃO</h3>
+                                    <span class="text-[11px] sm:text-xs font-semibold text-sky-300/90 group-hover:text-white flex items-center gap-0.5 flex-shrink-0">
+                                        Agendar <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                    </span>
+                                </div>
+                                <p class="text-slate-100 text-xs sm:text-sm leading-relaxed mt-0.5">
+                                    Instalação de ar-condicionado com segurança, eficiência e garantia de qualidade.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 3. HIGIENIZAÇÃO -->
+                        <div onclick="selectQuickService('Higienização Completa')" class="flyer-service-card rounded-2xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 cursor-pointer group">
+                            <div class="flyer-icon-box w-14 h-14 sm:w-20 sm:h-20 rounded-2xl flex-shrink-0 flex items-center justify-center p-2.5 sm:p-3 group-hover:scale-105 transition-transform">
+                                <!-- AC Unit + Cool Breeze + Snowflake SVG (Matching Flyer) -->
+                                <svg class="w-9 h-9 sm:w-11 sm:h-11 text-white" viewBox="0 0 64 64" fill="none">
+                                    <!-- Split AC Body -->
+                                    <rect x="8" y="12" width="48" height="22" rx="5" fill="currentColor"/>
+                                    <line x1="14" y1="28" x2="50" y2="28" stroke="#0a346b" stroke-width="3" stroke-linecap="round"/>
+                                    <!-- Breeze Lines -->
+                                    <path d="M20 39C20 44 17 48 14 51" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M30 39C30 44 27 48 24 51" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M40 39C40 43 38 46 36 49" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                    <!-- Small Snowflake -->
+                                    <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                                        <line x1="48" y1="42" x2="48" y2="56"/>
+                                        <line x1="41" y1="49" x2="55" y2="49"/>
+                                        <line x1="43" y1="44" x2="53" y2="54"/>
+                                        <line x1="53" y1="44" x2="43" y2="54"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center justify-between gap-2">
+                                    <h3 class="font-display font-black italic text-lg sm:text-2xl text-rh-cyan tracking-wide uppercase truncate">HIGIENIZAÇÃO</h3>
+                                    <span class="text-[11px] sm:text-xs font-semibold text-sky-300/90 group-hover:text-white flex items-center gap-0.5 flex-shrink-0">
+                                        Agendar <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                    </span>
+                                </div>
+                                <p class="text-slate-100 text-xs sm:text-sm leading-relaxed mt-0.5">
+                                    Elimina fungos, bactérias e odores, melhorando a qualidade do ar e o desempenho do seu equipamento.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 4. MANUTENÇÃO -->
+                        <div onclick="selectQuickService('Manutenção Preventiva e Corretiva')" class="flyer-service-card rounded-2xl p-3 sm:p-4 flex items-center gap-3 sm:gap-4 cursor-pointer group">
+                            <div class="flyer-icon-box w-14 h-14 sm:w-20 sm:h-20 rounded-2xl flex-shrink-0 flex items-center justify-center p-2.5 sm:p-3 group-hover:scale-105 transition-transform">
+                                <!-- Gear + Wrench SVG (Matching Flyer) -->
+                                <svg class="w-9 h-9 sm:w-11 sm:h-11 text-white" viewBox="0 0 64 64" fill="none">
+                                    <!-- Gear -->
+                                    <path d="M28 12L31 16.5L36.5 15.5L37.5 21L43 22L41.5 27.5L46 31L42 35L44 40L38.5 42L37 47.5L31.5 46L28 50L24.5 46L19 47.5L17.5 42L12 40L14 35L10 31L14.5 27.5L13 22L18.5 21L19.5 15.5L25 16.5L28 12Z" stroke="currentColor" stroke-width="3.2" fill="rgba(255,255,255,0.18)"/>
+                                    <!-- Inner Wrench emerging from Gear -->
+                                    <path d="M26 26C23.5 28.5 23.5 32.5 26 35L44 53C46 55 49.5 55 51.5 53C53.5 51 53.5 47.5 51.5 45.5L33.5 27.5C31.5 25 28 24.5 26 26Z" fill="currentColor" stroke="#0a346b" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center justify-between gap-2">
+                                    <h3 class="font-display font-black italic text-lg sm:text-2xl text-rh-cyan tracking-wide uppercase truncate">MANUTENÇÃO</h3>
+                                    <span class="text-[11px] sm:text-xs font-semibold text-sky-300/90 group-hover:text-white flex items-center gap-0.5 flex-shrink-0">
+                                        Agendar <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                                    </span>
+                                </div>
+                                <p class="text-slate-100 text-xs sm:text-sm leading-relaxed mt-0.5">
+                                    Manutenção preventiva e corretiva para garantir o bom funcionamento e maior vida útil do seu ar-condicionado.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: INTERACTIVE AC BREEZE & SPECIALIST VISUAL (INSPIRED BY FLYER RIGHT SIDE) -->
+                <div class="lg:col-span-5 flex flex-col items-center mt-2 lg:mt-0">
+                    
+                    <!-- Interactive Split AC Unit Blowing Cold Air -->
+                    <div class="relative w-full max-w-md mx-auto">
+                        
+                        <!-- 3D-Styled Split Air Conditioner Unit SVG at Top -->
+                        <div class="relative z-20 mx-auto w-11/12 sm:transform sm:-rotate-2 sm:hover:rotate-0 transition-transform duration-500">
+                            <div class="bg-gradient-to-b from-white via-slate-100 to-slate-300 rounded-2xl p-3.5 sm:p-4 shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-white">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-[9px] sm:text-[10px] font-display font-bold tracking-widest text-slate-500 uppercase">INVERTER ECO • DUAL COOL</span>
+                                    <div class="flex items-center gap-2">
+                                        <span id="acTempDisplay" class="font-display font-black text-xs bg-slate-900 text-sky-400 px-2 py-0.5 rounded">18°C</span>
+                                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                    </div>
+                                </div>
+                                <div class="h-5 sm:h-6 bg-gradient-to-r from-slate-200 via-white to-slate-200 rounded-lg border-b border-slate-300"></div>
+                                <!-- Air Vent Louver Open -->
+                                <div class="mt-2 h-4 sm:h-5 bg-slate-800 rounded-b-xl relative overflow-hidden flex items-center justify-around px-4">
+                                    <div class="w-full h-1 bg-sky-400/60 rounded-full shadow-[0_0_12px_#38bdf8]"></div>
+                                </div>
+                            </div>
+
+                            <!-- Temperature Control Interactive Pill (Enlarged Touch Targets on Mobile) -->
+                            <div class="absolute -bottom-3.5 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-4 bg-[#071c3d] border border-sky-400/60 rounded-full px-3 py-1 flex items-center gap-2.5 shadow-lg text-xs whitespace-nowrap">
+                                <span class="text-sky-300 font-medium">Clima:</span>
+                                <button type="button" onclick="changeAcTemp(-1)" aria-label="Diminuir temperatura" class="w-7 h-7 sm:w-6 sm:h-6 rounded-full bg-sky-500/25 hover:bg-sky-500/40 active:scale-90 text-white font-bold flex items-center justify-center transition-transform">-</button>
+                                <span id="acTempControlLabel" class="font-bold text-white min-w-[78px] text-center">Super Frio</span>
+                                <button type="button" onclick="changeAcTemp(1)" aria-label="Aumentar temperatura" class="w-7 h-7 sm:w-6 sm:h-6 rounded-full bg-sky-500/25 hover:bg-sky-500/40 active:scale-90 text-white font-bold flex items-center justify-center transition-transform">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Animated Icy Blue Air Streams (Matching the glowing blue rays under the AC in the flyer) -->
+                        <div class="relative h-24 sm:h-28 w-full overflow-hidden -mt-2 pointer-events-none flex justify-center">
+                            <div class="w-4/5 h-full bg-gradient-to-b from-sky-400/35 via-sky-500/15 to-transparent blur-xl transform -skew-x-12"></div>
+                            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 130" fill="none">
+                                <path class="air-breeze-ray" d="M90 5 Q70 65 25 125" stroke="url(#breezeGrad)" stroke-width="6" stroke-linecap="round"/>
+                                <path class="air-breeze-ray-2" d="M160 5 Q135 65 85 125" stroke="url(#breezeGrad)" stroke-width="8" stroke-linecap="round"/>
+                                <path class="air-breeze-ray-3" d="M230 5 Q205 65 155 125" stroke="url(#breezeGrad)" stroke-width="7" stroke-linecap="round"/>
+                                <path class="air-breeze-ray" d="M300 5 Q275 65 225 125" stroke="url(#breezeGrad)" stroke-width="6" stroke-linecap="round"/>
+                                <path class="air-breeze-ray-2" d="M350 5 Q325 65 280 125" stroke="url(#breezeGrad)" stroke-width="5" stroke-linecap="round"/>
+                                <defs>
+                                    <linearGradient id="breezeGrad" x1="0" y1="0" x2="0" y2="130" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.9"/>
+                                        <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.45"/>
+                                        <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <!-- Specialist Card Showcase (Representing the Professional in the Navy DP Polo Shirt) -->
+                        <div class="relative -mt-6 rounded-3xl flyer-service-card p-5 sm:p-6 border-2 border-sky-400/50 overflow-hidden">
+                            <div class="absolute -right-12 -top-12 w-44 h-44 bg-sky-500/20 rounded-full blur-2xl pointer-events-none"></div>
+                            
+                            <div class="flex flex-col items-center text-center">
+                                <!-- Professional Avatar with Navy Polo & DP Logo Badge -->
+                                <div class="relative w-40 h-44 sm:w-44 sm:h-48 mb-4 flex items-end justify-center">
+                                    <div class="absolute inset-0 bg-gradient-to-b from-sky-400/25 to-rh-blue/40 rounded-2xl border border-sky-300/40 shadow-inner"></div>
+                                    
+                                    <!-- Custom Vector Technician in Navy Blue Polo with Crossed Arms & DP Chest Logo -->
+                                    <svg class="relative z-10 w-36 h-40 sm:w-40 sm:h-44 drop-shadow-xl" viewBox="0 0 200 220" fill="none">
+                                        <!-- Head & Hair -->
+                                        <path d="M72 48 C72 25, 128 25, 128 48 C128 60, 125 82, 100 88 C75 82, 72 60, 72 48 Z" fill="#d99b72"/>
+                                        <path d="M70 46 C70 22, 130 20, 130 46 C126 34, 110 30, 95 32 C80 33, 74 38, 70 46 Z" fill="#1e293b"/>
+                                        <!-- Ears & Facial Features -->
+                                        <circle cx="71" cy="56" r="5" fill="#c6865d"/>
+                                        <circle cx="129" cy="56" r="5" fill="#c6865d"/>
+                                        <circle cx="88" cy="52" r="2.8" fill="#1e293b"/>
+                                        <circle cx="112" cy="52" r="2.8" fill="#1e293b"/>
+                                        <path d="M82 46 Q88 43 94 46" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+                                        <path d="M106 46 Q112 43 118 46" stroke="#1e293b" stroke-width="2.5" stroke-linecap="round"/>
+                                        <path d="M92 70 Q100 74 108 70" stroke="#7c4728" stroke-width="2.5" stroke-linecap="round"/>
+                                        <!-- Neck -->
+                                        <rect x="87" y="82" width="26" height="20" fill="#c6865d"/>
+                                        <!-- Navy Blue Polo Shirt -->
+                                        <path d="M30 125 C35 102, 65 96, 87 96 L113 96 C135 96, 165 102, 170 125 L178 215 L22 215 L30 125 Z" fill="#08285e" stroke="#1e40af" stroke-width="2"/>
+                                        <!-- Polo Collar -->
+                                        <path d="M84 94 L72 112 L96 116 L100 102 Z" fill="#051b42" stroke="#2563eb" stroke-width="1.5"/>
+                                        <path d="M116 94 L128 112 L104 116 L100 102 Z" fill="#051b42" stroke="#2563eb" stroke-width="1.5"/>
+                                        <!-- DP Ar Condicionado Chest Emblem on Uniform -->
+                                        <text x="118" y="138" font-family="Montserrat, sans-serif" font-weight="900" font-style="italic" font-size="15" fill="#ffffff">D</text>
+                                        <text x="129" y="138" font-family="Montserrat, sans-serif" font-weight="900" font-style="italic" font-size="15" fill="#38bdf8">P</text>
+                                        <text x="108" y="146" font-family="Montserrat, sans-serif" font-weight="800" font-style="italic" font-size="5" fill="#e2e8f0">AR CONDICIONADO</text>
+                                        <!-- Crossed Arms Pose -->
+                                        <path d="M36 160 C55 150, 115 152, 155 168 L150 192 C110 182, 55 180, 32 186 Z" fill="#c6865d"/>
+                                        <path d="M164 160 C145 150, 85 152, 45 168 L50 192 C90 182, 145 180, 168 186 Z" fill="#d99b72"/>
+                                    </svg>
+
+                                    <!-- Verified Technician Badge -->
+                                    <div class="absolute -bottom-2 bg-gradient-to-r from-rh-blue to-rh-cyan text-white text-[11px] font-display font-extrabold italic uppercase px-3.5 py-1 rounded-full shadow-lg border border-white/30">
+                                        Técnico Especializado
+                                    </div>
+                                </div>
+
+                                <h3 class="font-display font-black italic text-lg sm:text-xl text-white uppercase mt-2">
+                                    Padrão de Excelência <span class="text-rh-cyan">DP</span>
+                                </h3>
+                                <p class="text-xs sm:text-sm text-sky-100/90 mt-1.5 leading-relaxed">
+                                    Atendimento técnico uniformizado, ferramental de última geração (bomba de vácuo, manômetro digital e bolsa coletora) sem deixar sujeira na sua casa ou empresa em Araçatuba.
+                                </p>
+
+                                <!-- Quick Metrics -->
+                                <div class="grid grid-cols-3 gap-2 w-full mt-5 pt-4 border-t border-sky-400/25">
+                                    <div>
+                                        <span class="block font-display font-black italic text-base sm:text-xl text-rh-cyan">100%</span>
+                                        <span class="text-[10px] sm:text-[11px] text-slate-300">Higienizado</span>
+                                    </div>
+                                    <div>
+                                        <span class="block font-display font-black italic text-base sm:text-xl text-rh-cyan">-40%</span>
+                                        <span class="text-[10px] sm:text-[11px] text-slate-300">Consumo Energia</span>
+                                    </div>
+                                    <div>
+                                        <span class="block font-display font-black italic text-base sm:text-xl text-rh-cyan">Rápido</span>
+                                        <span class="text-[10px] sm:text-[11px] text-slate-300">Em Araçatuba</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- FLYER PHONE PILL BANNER + TRUST BADGES BAR (EXACT BOTTOM REPLICA OF THE FLYER) -->
+            <div class="mt-8 sm:mt-10 space-y-4 sm:space-y-5">
+                
+                <!-- Prominent Phone / WhatsApp Pill Banner -->
+                <div class="flyer-phone-pill rounded-3xl p-4 sm:px-8 sm:py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                    <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full md:w-auto">
+                        <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/15 border border-sky-300/50 flex items-center justify-center flex-shrink-0 shadow-inner">
+                            <!-- Classic Handset Icon from Flyer -->
+                            <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white drop-shadow" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.27 1.11l-2.18 2.1z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="block text-[11px] sm:text-xs text-sky-300 font-bold uppercase tracking-widest">Plantão de Atendimento • Araçatuba e Região</span>
+                            <div class="flex flex-col sm:flex-row items-center sm:items-baseline gap-0.5 sm:gap-3 mt-0.5 sm:mt-0">
+                                <span class="font-display font-extrabold text-sm sm:text-2xl text-white uppercase tracking-wide">TELEFONE:</span>
+                                <a href="https://wa.me/5518997936585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20DP%20Ar%20Condicionado%20e%20gostaria%20de%20um%20or%C3%A7amento%20em%20Ara%C3%A7atuba!" target="_blank" rel="noopener noreferrer" class="font-display font-black italic text-2xl sm:text-4xl md:text-5xl text-white tracking-wider hover:text-rh-cyan transition-colors">
+                                    (18) 99793-6585
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:flex sm:flex-wrap items-center gap-2.5 sm:gap-3 w-full md:w-auto justify-center">
+                        <a href="https://wa.me/5518997936585?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20a%20DP%20Ar%20Condicionado%20em%20Ara%C3%A7atuba." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 active:scale-98 text-slate-950 font-display font-black italic uppercase text-sm tracking-wide shadow-lg transition-all">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+                            Chamar no WhatsApp
+                        </a>
+                        <button type="button" onclick="copyPhoneNumber()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl bg-sky-500/20 hover:bg-sky-500/30 active:bg-sky-500/40 border border-sky-400/40 text-white font-semibold text-xs uppercase tracking-wider transition-all">
+                            <svg class="w-4 h-4 text-sky-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            <span id="copyPhoneBtnText">Copiar Número</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4 Pillars Trust Bar (Responsive 2x2 Grid on Mobile & 4-Col on Desktop) -->
+                <div class="flyer-trust-bar rounded-2xl p-4 sm:p-5 sm:px-8 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 items-center">
+                    <!-- Pillar 1: SERVIÇO DE QUALIDADE -->
+                    <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 sm:gap-3.5 p-2 sm:p-0">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-sky-500/15 border border-sky-400/40 flex items-center justify-center flex-shrink-0 text-white">
+                            <svg class="w-7 h-7 sm:w-8 sm:h-8" viewBox="0 0 36 36" fill="none">
+                                <path d="M18 3L6 8V17C6 25.2 11.1 32.6 18 35C24.9 32.6 30 25.2 30 17V8L18 3Z" fill="currentColor" fill-opacity="0.9"/>
+                                <path d="M13 18.5L16.5 22L23.5 14.5" stroke="#06152d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="font-display font-extrabold text-[11px] sm:text-sm uppercase tracking-wider text-white leading-tight">
+                            SERVIÇO<br>DE QUALIDADE
+                        </span>
+                    </div>
+
+                    <!-- Pillar 2: PROFISSIONAIS QUALIFICADOS -->
+                    <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 sm:gap-3.5 p-2 sm:p-0">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-sky-500/15 border border-sky-400/40 flex items-center justify-center flex-shrink-0 text-white">
+                            <svg class="w-7 h-7 sm:w-8 sm:h-8" viewBox="0 0 36 36" fill="none">
+                                <circle cx="18" cy="14" r="9" stroke="currentColor" stroke-width="3" fill="currentColor" fill-opacity="0.2"/>
+                                <circle cx="18" cy="14" r="5" fill="currentColor"/>
+                                <path d="M13 22L10 32L18 28L26 32L23 22" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span class="font-display font-extrabold text-[11px] sm:text-sm uppercase tracking-wider text-white leading-tight">
+                            PROFISSIONAIS<br>QUALIFICADOS
+                        </span>
+                    </div>
+
+                    <!-- Pillar 3: ATENDIMENTO RÁPIDO -->
+                    <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 sm:gap-3.5 p-2 sm:p-0">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-sky-500/15 border border-sky-400/40 flex items-center justify-center flex-shrink-0 text-white">
+                            <svg class="w-7 h-7 sm:w-8 sm:h-8" viewBox="0 0 36 36" fill="none">
+                                <circle cx="18" cy="18" r="13" stroke="currentColor" stroke-width="3" fill="currentColor" fill-opacity="0.15"/>
+                                <path d="M18 10V18L24 18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="font-display font-extrabold text-[11px] sm:text-sm uppercase tracking-wider text-white leading-tight">
+                            ATENDIMENTO<br>RÁPIDO
+                        </span>
+                    </div>
+
+                    <!-- Pillar 4: SATISFAÇÃO GARANTIDA -->
+                    <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-2 sm:gap-3.5 p-2 sm:p-0">
+                        <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-sky-500/15 border border-sky-400/40 flex items-center justify-center flex-shrink-0 text-white">
+                            <svg class="w-7 h-7 sm:w-8 sm:h-8" viewBox="0 0 36 36" fill="none">
+                                <path d="M7 16H12V30H7C5.9 30 5 29.1 5 28V18C5 16.9 5.9 16 7 16Z" fill="currentColor"/>
+                                <path d="M14 16L18 7C19.5 7 21 8.5 21 10.5L20 15H28C30 15 31.5 16.8 31 18.8L28.5 27.8C28.1 29.1 26.9 30 25.5 30H14V16Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span class="font-display font-extrabold text-[11px] sm:text-sm uppercase tracking-wider text-white leading-tight">
+                            SATISFAÇÃO<br>GARANTIDA
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILED TECHNICAL SERVICES SECTION -->
+    <section id="servicos" class="py-12 sm:py-16 lg:py-24 relative border-t border-sky-500/20 bg-[#051329]/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+                <span class="text-rh-cyan font-display font-extrabold italic uppercase tracking-widest text-xs sm:text-sm">Soluções Completas em Climatização</span>
+                <h2 class="font-display font-black italic text-2xl sm:text-4xl text-white uppercase mt-2 leading-tight">
+                    CUIDADO COMPLETO PARA SEU <span class="text-rh-cyan">AR-CONDICIONADO</span> EM ARAÇATUBA
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-3">
+                    No calor intenso de Araçatuba, seu ar-condicionado trabalha no limite todos os dias. Veja tudo o que entregamos em cada etapa técnica para proteger sua saúde e seu bolso.
+                </p>
+            </div>
+
+            <!-- 4 Detailed Technical Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                
+                <!-- Card 1: Instalação Técnica -->
+                <div class="flyer-service-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-6">
+                            <div class="flyer-icon-box w-14 h-14 rounded-2xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase bg-sky-500/20 text-sky-300 border border-sky-400/30">Padrão Fabricante</span>
+                        </div>
+                        <h3 class="font-display font-black italic text-2xl text-rh-cyan uppercase">1. INSTALAÇÃO PROFISSIONAL</h3>
+                        <p class="text-slate-200 text-sm mt-2 leading-relaxed">
+                            Instalamos aparelhos Split Hi-Wall, Inverter, Piso Teto e Cassete seguindo todas as normas exigidas pelos fabricantes para manter a garantia de fábrica.
+                        </p>
+                        <ul class="mt-5 space-y-2.5 text-xs sm:text-sm text-slate-200">
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Tubulação de cobre certificada e isolamento térmico blindado</li>
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Vácuo no sistema com Bomba de Vácuo e vacuômetro digital</li>
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Nivelamento a laser e acabamento estético impecável</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectQuickService('Instalação de Ar-Condicionado')" class="mt-6 w-full py-3 rounded-xl bg-rh-blue hover:bg-rh-cyan text-white font-display font-extrabold italic uppercase text-xs sm:text-sm tracking-wider transition-colors">
+                        Solicitar Orçamento de Instalação
+                    </button>
+                </div>
+
+                <!-- Card 2: Higienização Profunda -->
+                <div class="flyer-service-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-6">
+                            <div class="flyer-icon-box w-14 h-14 rounded-2xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">Saúde Respiratória</span>
+                        </div>
+                        <h3 class="font-display font-black italic text-2xl text-rh-cyan uppercase">2. HIGIENIZAÇÃO PROFUNDA</h3>
+                        <p class="text-slate-200 text-sm mt-2 leading-relaxed">
+                            Elimina 99,9% dos fungos, ácaros, bactérias e mau cheiro. Ideal para quem sofre com rinite, sinusite ou alergias e quer recuperar a potência de refrigeração.
+                        </p>
+                        <ul class="mt-5 space-y-2.5 text-xs sm:text-sm text-slate-200">
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Lavagem pressurizada no local com bolsa coletora impermeável</li>
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Aplicação de bactericida e fungicida biodegradável</li>
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Desobstrução total da bandeja e dreno (evita goteiras)</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectQuickService('Higienização Completa')" class="mt-6 w-full py-3 rounded-xl bg-rh-blue hover:bg-rh-cyan text-white font-display font-extrabold italic uppercase text-xs sm:text-sm tracking-wider transition-colors">
+                        Agendar Higienização
+                    </button>
+                </div>
+
+                <!-- Card 3: Limpeza Periódica -->
+                <div class="flyer-service-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-6">
+                            <div class="flyer-icon-box w-14 h-14 rounded-2xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase bg-sky-500/20 text-sky-300 border border-sky-400/30">Ar Puro e Economia</span>
+                        </div>
+                        <h3 class="font-display font-black italic text-2xl text-rh-cyan uppercase">3. LIMPEZA TÉCNICA</h3>
+                        <p class="text-slate-200 text-sm mt-2 leading-relaxed">
+                            Remoção completa de poeira acumulada na turbina, aletas, filtros e serpentina. Devolve o fluxo de vento forte e reduz o consumo de energia elétrica.
+                        </p>
+                        <ul class="mt-5 space-y-2.5 text-xs sm:text-sm text-slate-200">
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Desmontagem cuidadosa da carenagem frontal e defletores</li>
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Limpeza da unidade condensadora externa</li>
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Sem respingos ou sujeira na parede do seu ambiente</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectQuickService('Limpeza Técnica')" class="mt-6 w-full py-3 rounded-xl bg-rh-blue hover:bg-rh-cyan text-white font-display font-extrabold italic uppercase text-xs sm:text-sm tracking-wider transition-colors">
+                        Solicitar Limpeza
+                    </button>
+                </div>
+
+                <!-- Card 4: Manutenção Preventiva e Corretiva -->
+                <div class="flyer-service-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-4 mb-6">
+                            <div class="flyer-icon-box w-14 h-14 rounded-2xl flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+                            </div>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase bg-amber-500/20 text-amber-300 border border-amber-400/30">Diagnóstico Preciso</span>
+                        </div>
+                        <h3 class="font-display font-black italic text-2xl text-rh-cyan uppercase">4. MANUTENÇÃO PREVENTIVA E CORRETIVA</h3>
+                        <p class="text-slate-200 text-sm mt-2 leading-relaxed">
+                            Seu ar parou de gelar, está pingando água, fazendo barulho ou apresentando código de erro? Realizamos o diagnóstico rápido e o reparo com peças de qualidade.
+                        </p>
+                        <ul class="mt-5 space-y-2.5 text-xs sm:text-sm text-slate-200">
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Medição de pressão e recarga de fluido refrigerante (Gás R410A / R32 / R22)</li>
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Troca de capacitores, sensores, placas e reparo de vazamentos</li>
+                            <li class="flex items-center gap-2.5"><span class="w-5 h-5 rounded-full bg-rh-cyan/20 text-rh-cyan flex items-center justify-center font-bold">✓</span> Planos de manutenção preventiva para clínicas, lojas e escritórios</li>
+                        </ul>
+                    </div>
+                    <button onclick="selectQuickService('Manutenção Preventiva e Corretiva')" class="mt-6 w-full py-3 rounded-xl bg-rh-blue hover:bg-rh-cyan text-white font-display font-extrabold italic uppercase text-xs sm:text-sm tracking-wider transition-colors">
+                        Agendar Visita Técnica
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE RAIO-X DA HIGIENIZAÇÃO (BEFORE & AFTER) -->
+    <section id="higienizacao" class="py-12 sm:py-16 lg:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                
+                <div class="lg:col-span-5 space-y-4 sm:space-y-5 text-center lg:text-left">
+                    <span class="text-rh-cyan font-display font-extrabold italic uppercase tracking-widest text-xs sm:text-sm">Comparador Interativo</span>
+                    <h2 class="font-display font-black italic text-2xl sm:text-4xl text-white uppercase leading-tight">
+                        VEJA A DIFERENÇA DA NOSSA <span class="text-rh-cyan">HIGIENIZAÇÃO</span>
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Muitas vezes o aparelho parece limpo por fora, mas a turbina e a serpentina interna acumulam crostas de poeira, mofo e bactérias que bloqueiam a passagem do vento e aumentam a conta de luz em até 40%.
+                    </p>
+                    <div class="space-y-3 pt-1 text-left">
+                        <div class="p-4 rounded-2xl bg-rose-950/40 border border-rose-500/30">
+                            <span class="font-display font-bold text-rose-300 text-xs uppercase tracking-wider">Sem Higienização:</span>
+                            <p class="text-xs text-slate-300 mt-1">Vento fraco, mau cheiro ao ligar, crises de rinite, gotejamento na parede e compressor forçado.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-sky-950/60 border border-sky-400/40">
+                            <span class="font-display font-bold text-rh-cyan text-xs uppercase tracking-wider">Após Higienização DP Ar Condicionado:</span>
+                            <p class="text-xs text-slate-200 mt-1">Vento forte e gelado em poucos minutos, ar 100% esterilizado, silêncio total e menor consumo de energia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Slider Container -->
+                <div class="lg:col-span-7">
+                    <div class="flyer-service-card rounded-3xl p-4 sm:p-7">
+                        <div class="flex items-center justify-between gap-2 mb-3 sm:mb-4">
+                            <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-rose-500/20 border border-rose-400/40 text-rose-200 font-display font-bold text-[10px] sm:text-xs uppercase">Antes (Sujo)</span>
+                            <span class="text-[11px] sm:text-xs text-sky-300 font-semibold text-center">Arraste para comparar</span>
+                            <span class="px-2.5 sm:px-3 py-1 rounded-lg bg-sky-500/25 border border-sky-400/50 text-sky-200 font-display font-bold text-[10px] sm:text-xs uppercase">Depois (Limpo)</span>
+                        </div>
+
+                        <!-- Visual Comparison Viewport -->
+                        <div id="compareViewport" class="relative h-56 sm:h-72 rounded-2xl overflow-hidden border border-sky-400/40 select-none bg-[#040d1b] touch-pan-y cursor-ew-resize">
+                            
+                            <!-- AFTER LAYER (Full Width Underneath: Sparkling Clean Evaporator & Turbine) -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-[#0a2d5e] via-[#0d3b7a] to-[#061a38] flex flex-col items-center justify-center p-4 sm:p-6">
+                                <div class="w-full max-w-md space-y-2.5 sm:space-y-3">
+                                    <div class="flex items-center justify-between text-[10px] sm:text-xs font-bold text-sky-200">
+                                        <span>SERPENTINA & TURBINA ESTERILIZADAS</span>
+                                        <span class="text-emerald-300">Fluxo: 100%</span>
+                                    </div>
+                                    <!-- Clean Metallic Fins Graphic -->
+                                    <div class="h-28 sm:h-32 rounded-xl bg-gradient-to-r from-sky-300/30 via-white/35 to-sky-300/30 border border-sky-300/60 p-3 flex flex-col justify-between relative overflow-hidden shadow-[0_0_30px_rgba(56,189,248,0.4)]">
+                                        <div class="grid grid-cols-12 gap-1 h-full opacity-80">
+                                            <div class="bg-sky-200/60 rounded"></div><div class="bg-sky-100/70 rounded"></div><div class="bg-sky-200/60 rounded"></div><div class="bg-sky-100/70 rounded"></div>
+                                            <div class="bg-sky-200/60 rounded"></div><div class="bg-sky-100/70 rounded"></div><div class="bg-sky-200/60 rounded"></div><div class="bg-sky-100/70 rounded"></div>
+                                            <div class="bg-sky-200/60 rounded"></div><div class="bg-sky-100/70 rounded"></div><div class="bg-sky-200/60 rounded"></div><div class="bg-sky-100/70 rounded"></div>
+                                        </div>
+                                        <div class="absolute inset-0 flex items-center justify-center p-2">
+                                            <span class="px-3 sm:px-4 py-1.5 rounded-full bg-[#061836]/90 border border-sky-300 text-sky-200 font-display font-black italic text-[11px] sm:text-sm uppercase shadow-lg text-center">
+                                                ❄ Ar Puro • Zero Fungos e Bactérias
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- BEFORE LAYER (Clipped by Slider Percentage: Dusty/Clogged Coil) -->
+                            <div id="beforeLayer" style="width: 50%;" class="absolute inset-y-0 left-0 overflow-hidden bg-gradient-to-br from-[#2a211d] via-[#3b2f26] to-[#1f1916] border-r-2 border-sky-400">
+                                <div id="beforeInnerContent" class="h-full flex flex-col items-center justify-center p-4 sm:p-6">
+                                    <div class="w-full max-w-md space-y-2.5 sm:space-y-3">
+                                        <div class="flex items-center justify-between text-[10px] sm:text-xs font-bold text-amber-200/90">
+                                            <span>ACÚMULO DE POEIRA E FUNGOS</span>
+                                            <span class="text-rose-400">Fluxo: 42%</span>
+                                        </div>
+                                        <div class="h-28 sm:h-32 rounded-xl bg-stone-800 border border-amber-700/50 p-3 flex flex-col justify-between relative overflow-hidden">
+                                            <div class="grid grid-cols-12 gap-1 h-full opacity-55">
+                                                <div class="bg-stone-600 rounded"></div><div class="bg-amber-900/60 rounded"></div><div class="bg-stone-700 rounded"></div><div class="bg-stone-600 rounded"></div>
+                                                <div class="bg-amber-950 rounded"></div><div class="bg-stone-600 rounded"></div><div class="bg-stone-700 rounded"></div><div class="bg-amber-900/50 rounded"></div>
+                                                <div class="bg-stone-600 rounded"></div><div class="bg-stone-700 rounded"></div><div class="bg-amber-950 rounded"></div><div class="bg-stone-600 rounded"></div>
+                                            </div>
+                                            <div class="absolute inset-0 flex items-center justify-center p-2">
+                                                <span class="px-3 sm:px-4 py-1.5 rounded-full bg-stone-950/90 border border-amber-500/60 text-amber-200 font-display font-black italic text-[11px] sm:text-sm uppercase text-center">
+                                                    ⚠ Poeira, Ácaros e Alto Consumo
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Range Slider Control -->
+                        <div class="mt-4 sm:mt-5 px-1">
+                            <input id="compareSlider" type="range" min="5" max="95" value="50" aria-label="Comparar antes e depois da higienização" class="w-full cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE BTU CALCULATOR + SMART SERVICE SIMULATOR -->
+    <section id="calculadora" class="py-12 sm:py-16 lg:py-24 bg-[#051329]/80 border-y border-sky-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+                <span class="text-rh-cyan font-display font-extrabold italic uppercase tracking-widest text-xs sm:text-sm">Ferramenta Exclusiva DP Ar Condicionado</span>
+                <h2 class="font-display font-black italic text-2xl sm:text-4xl text-white uppercase mt-2 leading-tight">
+                    CALCULADORA DE <span class="text-rh-cyan">BTUs</span> PARA O CLIMA DE ARAÇATUBA
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base mt-2">
+                    Vai comprar ou instalar um ar-condicionado? Descubra a potência exata para o seu ambiente considerando o calor da nossa região.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+                <!-- Calculator Inputs -->
+                <div class="lg:col-span-7 flyer-service-card rounded-3xl p-5 sm:p-8 space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <label for="btuArea" class="text-xs font-display font-bold uppercase tracking-wider text-sky-300">
+                                    Área do Ambiente (m²)
+                                </label>
+                                <span id="btuAreaLabel" class="font-display font-black italic text-lg sm:text-xl text-white">16 m²</span>
+                            </div>
+                            <input id="btuArea" type="range" min="6" max="80" value="16" oninput="calculateBTU()" class="w-full cursor-pointer">
+                        </div>
+
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <label for="btuPeople" class="text-xs font-display font-bold uppercase tracking-wider text-sky-300">
+                                    Quantidade de Pessoas
+                                </label>
+                                <span id="btuPeopleLabel" class="font-display font-black italic text-lg sm:text-xl text-white">2</span>
+                            </div>
+                            <input id="btuPeople" type="range" min="1" max="15" value="2" oninput="calculateBTU()" class="w-full cursor-pointer">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="btuSun" class="block text-xs font-display font-bold uppercase tracking-wider text-sky-300 mb-2">
+                                Incidência de Sol (Clima Araçatuba)
+                            </label>
+                            <select id="btuSun" onchange="calculateBTU()" class="w-full rounded-xl bg-[#041022] border border-sky-400/40 px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-rh-cyan">
+                                <option value="650">Sol da Manhã / Sombra (650 BTUs/m²)</option>
+                                <option value="850" selected>Sol da Tarde Intenso - Araçatuba (850 BTUs/m²)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="btuElectronics" class="block text-xs font-display font-bold uppercase tracking-wider text-sky-300 mb-2">
+                                Eletrônicos no Ambiente (TV, PC, etc.)
+                            </label>
+                            <select id="btuElectronics" onchange="calculateBTU()" class="w-full rounded-xl bg-[#041022] border border-sky-400/40 px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-rh-cyan">
+                                <option value="1">1 equipamento</option>
+                                <option value="2" selected>2 equipamentos</option>
+                                <option value="4">3 a 5 equipamentos (Escritório/Comércio)</option>
+                                <option value="7">Mais de 5 equipamentos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-[#041022]/80 border border-sky-400/25 text-xs text-slate-300 flex items-start gap-3">
+                        <svg class="w-5 h-5 text-rh-cyan flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span>Dica Técnica <strong>DP Ar Condicionado</strong>: Em cidades quentes como Araçatuba, dimensionar corretamente evita que o compressor trabalhe sem parar e garante economia real na conta de energia.</span>
+                    </div>
+                </div>
+
+                <!-- Calculator Output Card -->
+                <div class="lg:col-span-5 flyer-service-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between text-center border-2 border-rh-cyan/60">
+                    <div>
+                        <span class="px-3 py-1 rounded-full bg-sky-500/20 text-sky-300 font-display font-bold text-xs uppercase">Potência Recomendada</span>
+                        <div class="my-5 sm:my-6">
+                            <span id="btuResultValue" class="font-display font-black italic text-4xl sm:text-6xl text-rh-cyan block">12.000 BTUs</span>
+                            <span id="btuExactCalc" class="text-xs text-slate-300 mt-2 block">Cálculo térmico estimado: ~15.300 BTUs</span>
+                        </div>
+                        <p id="btuModelSuggestion" class="text-xs sm:text-sm text-slate-200 bg-[#041022]/70 rounded-xl p-3 border border-sky-400/30">
+                            Ideal: <strong>Split Inverter 18.000 BTUs</strong> para resfriamento rápido e silencioso.
+                        </p>
+                    </div>
+
+                    <button type="button" onclick="sendBtuToQuote()" class="mt-6 w-full py-3.5 rounded-xl flyer-icon-box text-white font-display font-black italic uppercase text-xs sm:text-sm tracking-wider active:scale-98 sm:hover:scale-[1.02] transition-transform">
+                        Orçar Instalação dessa Potência
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARAÇATUBA COVERAGE & SMART WHATSAPP QUOTE FORM -->
+    <section id="orcamento" class="py-12 sm:py-16 lg:py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+                
+                <!-- Left Column: Coverage in Araçatuba & Regional Highlights -->
+                <div id="aracatuba" class="lg:col-span-5 space-y-5 sm:space-y-6 text-center lg:text-left">
+                    <span class="text-rh-cyan font-display font-extrabold italic uppercase tracking-widest text-xs sm:text-sm">Atendimento Local em Araçatuba - SP</span>
+                    <h2 class="font-display font-black italic text-2xl sm:text-4xl text-white uppercase leading-tight">
+                        ATENDIMENTO ÁGIL EM TODOS OS BAIRROS DE <span class="text-rh-cyan">ARAÇATUBA</span>
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Nossa equipe atende residências, condomínios, consultórios, escritórios e comércios em toda Araçatuba com agendamento rápido e horário marcado.
+                    </p>
+
+                    <!-- Interactive Neighborhood Tags (Tap to fill form on mobile) -->
+                    <div class="text-left">
+                        <h3 class="text-xs font-display font-bold uppercase tracking-wider text-sky-300 mb-2.5">Toque no seu bairro para preencher:</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <button type="button" onclick="selectNeighborhood('Centro')" class="px-3 py-1.5 rounded-xl bg-rh-panel hover:bg-rh-blue/40 active:scale-95 border border-sky-400/30 text-xs text-slate-200 transition-all">Centro</button>
+                            <button type="button" onclick="selectNeighborhood('Jardim Nova Yorque')" class="px-3 py-1.5 rounded-xl bg-rh-panel hover:bg-rh-blue/40 active:scale-95 border border-sky-400/30 text-xs text-slate-200 transition-all">Jardim Nova Yorque</button>
+                            <button type="button" onclick="selectNeighborhood('Higienópolis')" class="px-3 py-1.5 rounded-xl bg-rh-panel hover:bg-rh-blue/40 active:scale-95 border border-sky-400/30 text-xs text-slate-200 transition-all">Higienópolis</button>
+                            <button type="button" onclick="selectNeighborhood('Morada dos Nobres')" class="px-3 py-1.5 rounded-xl bg-rh-panel hover:bg-rh-blue/40 active:scale-95 border border-sky-400/30 text-xs text-slate-200 transition-all">Morada dos Nobres</button>
+                            <button type="button" onclick="selectNeighborhood('Ipanema')" class="px-3 py-1.5 rounded-xl bg-rh-panel hover:bg-rh-blue/40 active:scale-95 border border-sky-400/30 text-xs text-slate-200 transition-all">Ipanema</button>
+                            <button type="button" onclick="selectNeighborhood('Saudade')" class="px-3 py-1.5 rounded-xl bg-rh-panel hover:bg-rh-blue/40 active:scale-95 border border-sky-400/30 text-xs text-slate-200 transition-all">Saudade</button>
+                            <button type="button" onclick="selectNeighborhood('Umuarama')" class="px-3 py-1.5 rounded-xl bg-rh-panel hover:bg-rh-blue/40 active:scale-95 border border-sky-400/30 text-xs text-slate-200 transition-all">Umuarama</button>
+                            <button type="button" onclick="selectNeighborhood('São Joaquim')" class="px-3 py-1.5 rounded-xl bg-rh-panel hover:bg-rh-blue/40 active:scale-95 border border-sky-400/30 text-xs text-slate-200 transition-all">São Joaquim</button>
+                            <button type="button" onclick="selectNeighborhood('Concórdia')" class="px-3 py-1.5 rounded-xl bg-rh-panel hover:bg-rh-blue/40 active:scale-95 border border-sky-400/30 text-xs text-slate-200 transition-all">Concórdia</button>
+                            <button type="button" onclick="selectNeighborhood('Condomínios & Região')" class="px-3 py-1.5 rounded-xl bg-rh-panel hover:bg-rh-blue/40 active:scale-95 border border-sky-400/30 text-xs text-slate-200 transition-all">Condomínios & Região</button>
+                        </div>
+                    </div>
+
+                    <!-- Direct Contact Card -->
+                    <div class="flyer-service-card rounded-2xl p-5 space-y-3 text-left">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl flyer-icon-box flex items-center justify-center text-white flex-shrink-0">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.27 1.11l-2.18 2.1z"/></svg>
+                            </div>
+                            <div>
+                                <span class="text-xs text-sky-300 font-bold uppercase">Central de Agendamento e WhatsApp</span>
+                                <p class="font-display font-black italic text-xl text-white">(18) 99793-6585</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-300">
+                            Prefere enviar os detalhes do serviço já preenchidos? Use o simulador abaixo e receba seu orçamento direto no WhatsApp em poucos instantes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Quote Generator Form -->
+                <div class="lg:col-span-7">
+                    <div class="flyer-service-card rounded-3xl p-5 sm:p-8 border-2 border-sky-400/50">
+                        <h3 class="font-display font-black italic text-xl sm:text-3xl text-white uppercase">
+                            SOLICITAR <span class="text-rh-cyan">ORÇAMENTO RÁPIDO</span>
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-300 mt-1 mb-5 sm:mb-6">
+                            Escolha o serviço desejado abaixo e envie sua solicitação direto para nossa equipe técnica.
+                        </p>
+
+                        <!-- text-base on mobile prevents iOS Safari auto-zoom on input focus -->
+                        <form id="quoteForm" onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="clientName" class="block text-xs font-bold uppercase text-sky-300 mb-1.5">Seu Nome *</label>
+                                    <input id="clientName" type="text" required placeholder="Ex: João Silva" class="w-full rounded-xl bg-[#041022] border border-sky-400/40 px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-rh-cyan">
+                                </div>
+                                <div>
+                                    <label for="clientNeighborhood" class="block text-xs font-bold uppercase text-sky-300 mb-1.5">Bairro em Araçatuba *</label>
+                                    <input id="clientNeighborhood" type="text" required placeholder="Ex: Centro, Nova Yorque, Ipanema..." class="w-full rounded-xl bg-[#041022] border border-sky-400/40 px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-rh-cyan">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="serviceType" class="block text-xs font-bold uppercase text-sky-300 mb-1.5">Serviço Desejado *</label>
+                                    <select id="serviceType" class="w-full rounded-xl bg-[#041022] border border-sky-400/40 px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-rh-cyan">
+                                        <option value="Higienização Completa">Higienização Completa (Elimina Fungos/Odores)</option>
+                                        <option value="Limpeza Técnica">Limpeza Técnica (Remoção de Poeira/Sujeira)</option>
+                                        <option value="Instalação de Ar-Condicionado">Instalação de Ar-Condicionado</option>
+                                        <option value="Manutenção Preventiva e Corretiva">Manutenção Preventiva / Corretiva</option>
+                                        <option value="Pacote Completo (Mais de 1 aparelho)">Atendimento para Mais de 1 Aparelho</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="acPower" class="block text-xs font-bold uppercase text-sky-300 mb-1.5">Potência / Modelo do Aparelho</label>
+                                    <select id="acPower" class="w-full rounded-xl bg-[#041022] border border-sky-400/40 px-4 py-3 text-base sm:text-sm text-white focus:outline-none focus:border-rh-cyan">
+                                        <option value="9.000 ou 12.000 BTUs (Split)">9.000 ou 12.000 BTUs (Split)</option>
+                                        <option value="18.000 ou 24.000 BTUs (Split)">18.000 ou 24.000 BTUs (Split)</option>
+                                        <option value="30.000+ BTUs / Piso Teto / Cassete">30.000+ BTUs / Piso Teto / Cassete</option>
+                                        <option value="Ainda não sei a potência">Ainda não sei a potência</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="clientNotes" class="block text-xs font-bold uppercase text-sky-300 mb-1.5">Observações ou Detalhes (Opcional)</label>
+                                <textarea id="clientNotes" rows="3" placeholder="Ex: Tenho 2 aparelhos para higienizar, melhor horário no período da manhã..." class="w-full rounded-xl bg-[#041022] border border-sky-400/40 px-4 py-3 text-base sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-rh-cyan"></textarea>
+                            </div>
+
+                            <!-- Confirmation Feedback Box -->
+                            <div id="quoteFeedback" class="hidden p-4 rounded-xl bg-emerald-500/20 border border-emerald-400/50 text-emerald-200 text-xs sm:text-sm"></div>
+
+                            <div class="pt-2 flex flex-col sm:flex-row gap-3">
+                                <button type="submit" class="flex-1 py-4 px-6 rounded-2xl bg-emerald-500 hover:bg-emerald-400 active:scale-98 text-slate-950 font-display font-black italic uppercase text-sm tracking-wider shadow-lg flex items-center justify-center gap-2 transition-all">
+                                    <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771z"/></svg>
+                                    Enviar Pedido via WhatsApp
+                                </button>
+                                <button type="button" onclick="copyFormattedQuote()" class="py-4 px-5 rounded-2xl bg-rh-panel hover:bg-rh-card active:bg-rh-card border border-sky-400/40 text-sky-200 font-display font-bold uppercase text-xs tracking-wider transition-all">
+                                    Copiar Resumo
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH EXACT FLYER CLOSING MESSAGE (Extra bottom padding on mobile so floating button never overlaps content) -->
+    <footer class="pt-10 pb-24 sm:pt-12 sm:pb-10 bg-[#020914] border-t border-sky-400/30 text-center relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            
+            <!-- Exact Closing Motto from the Flyer Bottom -->
+            <div class="py-5 sm:py-6 px-4 rounded-3xl bg-gradient-to-b from-[#071c3d]/90 to-[#041022]/90 border border-sky-400/35 shadow-xl">
+                <h2 class="font-display font-black italic text-lg sm:text-3xl text-white uppercase tracking-wide">
+                    AGRADECEMOS TODOS OS NOSSOS CLIENTES
+                </h2>
+                <div class="flex items-center justify-center gap-4 mt-1.5 sm:mt-2">
+                    <span class="hidden sm:block h-0.5 w-16 bg-rh-cyan/60"></span>
+                    <p class="font-display font-extrabold italic text-xs sm:text-xl text-rh-cyan uppercase tracking-wider">
+                        POR CONFIAR NO NOSSO TRABALHO!
+                    </p>
+                    <span class="hidden sm:block h-0.5 w-16 bg-rh-cyan/60"></span>
+                </div>
+            </div>
+
+            <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-slate-400">
+                <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+                    <span class="font-display font-black italic text-white text-sm sm:text-base">DP <span class="text-rh-cyan">AR CONDICIONADO</span></span>
+                    <span>• Araçatuba - SP • WhatsApp: (18) 99793-6585</span>
+                </div>
+                <p>© 2026 DP Ar Condicionado • Limpeza, Instalação, Higienização e Manutenção de Ar-Condicionado.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Quick WhatsApp Action Button -->
+    <a href="https://wa.me/5518997936585?text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20da%20DP%20Ar%20Condicionado%20em%20Ara%C3%A7atuba!" target="_blank" rel="noopener noreferrer" aria-label="Orçamento Rápido via WhatsApp" class="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 z-50 flex items-center gap-2 sm:gap-2.5 bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-slate-950 font-display font-black italic uppercase text-xs sm:text-sm px-4 sm:px-5 py-3 sm:py-3.5 rounded-full shadow-[0_10px_25px_rgba(16,185,129,0.5)] sm:hover:scale-105 transition-transform">
+        <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/></svg>
+        <span>Orçamento Rápido</span>
+    </a>
+
+    <script>
+        // 1. Mobile Navigation Drawer Logic with Open/Close Icon State
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIconOpen = document.getElementById('menuIconOpen');
+        const menuIconClose = document.getElementById('menuIconClose');
+
+        function toggleMobileMenu(forceClose = false) {
+            const isHidden = forceClose ? true : mobileMenu.classList.toggle('hidden');
+            if (forceClose) mobileMenu.classList.add('hidden');
+            menuIconOpen.classList.toggle('hidden', !isHidden);
+            menuIconClose.classList.toggle('hidden', isHidden);
+            mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
+        }
+
+        mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(false));
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => toggleMobileMenu(true));
+        });
+
+        // 2. Interactive Split AC Temperature Showcase
+        let currentAcTemp = 18;
+        function changeAcTemp(delta) {
+            currentAcTemp = Math.min(24, Math.max(16, currentAcTemp + delta));
+            document.getElementById('acTempDisplay').textContent = currentAcTemp + '°C';
+            const label = document.getElementById('acTempControlLabel');
+            if (currentAcTemp <= 18) {
+                label.textContent = 'Super Frio';
+            } else if (currentAcTemp <= 21) {
+                label.textContent = 'Conforto Ideal';
+            } else {
+                label.textContent = 'Econômico';
+            }
+        }
+
+        // 3. Quick Service & Neighborhood Selection for Mobile Convenience
+        function selectQuickService(serviceName) {
+            const selectEl = document.getElementById('serviceType');
+            for (let i = 0; i < selectEl.options.length; i++) {
+                if (selectEl.options[i].value === serviceName) {
+                    selectEl.selectedIndex = i;
+                    break;
+                }
+            }
+            document.getElementById('orcamento').scrollIntoView({ behavior: 'smooth' });
+            const clientNameInput = document.getElementById('clientName');
+            setTimeout(() => clientNameInput.focus({ preventScroll: true }), 650);
+        }
+
+        function selectNeighborhood(neighborhoodName) {
+            const inputEl = document.getElementById('clientNeighborhood');
+            inputEl.value = neighborhoodName;
+            document.getElementById('orcamento').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 4. Before & After Higienização Slider (Synced Width + Direct Touch Dragging)
+        const compareSlider = document.getElementById('compareSlider');
+        const beforeLayer = document.getElementById('beforeLayer');
+        const compareViewport = document.getElementById('compareViewport');
+        const beforeInnerContent = document.getElementById('beforeInnerContent');
+
+        function syncCompareWidth() {
+            if (compareViewport && beforeInnerContent) {
+                beforeInnerContent.style.width = compareViewport.offsetWidth + 'px';
+            }
+        }
+
+        function updateComparison(percentage) {
+            const clamped = Math.min(95, Math.max(5, percentage));
+            beforeLayer.style.width = clamped + '%';
+            compareSlider.value = clamped;
+        }
+
+        compareSlider.addEventListener('input', (e) => {
+            updateComparison(parseFloat(e.target.value));
+        });
+
+        // Allow direct touch/mouse dragging on the comparison box itself
+        let isDraggingCompare = false;
+        function handleViewportPointer(clientX) {
+            const rect = compareViewport.getBoundingClientRect();
+            const pct = ((clientX - rect.left) / rect.width) * 100;
+            updateComparison(pct);
+        }
+
+        compareViewport.addEventListener('pointerdown', (e) => {
+            isDraggingCompare = true;
+            handleViewportPointer(e.clientX);
+        });
+        window.addEventListener('pointermove', (e) => {
+            if (!isDraggingCompare) return;
+            handleViewportPointer(e.clientX);
+        });
+        window.addEventListener('pointerup', () => {
+            isDraggingCompare = false;
+        });
+        window.addEventListener('resize', syncCompareWidth);
+
+        // 5. BTU Calculator tailored for Araçatuba Climate
+        let recommendedCommercialBtu = '12.000 BTUs';
+        function calculateBTU() {
+            const area = parseInt(document.getElementById('btuArea').value, 10);
+            const people = parseInt(document.getElementById('btuPeople').value, 10);
+            const sunFactor = parseInt(document.getElementById('btuSun').value, 10);
+            const electronics = parseInt(document.getElementById('btuElectronics').value, 10);
+
+            document.getElementById('btuAreaLabel').textContent = area + ' m²';
+            document.getElementById('btuPeopleLabel').textContent = people;
+
+            // Additional people beyond the first person add heat load
+            const extraPeople = Math.max(0, people - 1);
+            const rawBtu = (area * sunFactor) + (extraPeople * 700) + (electronics * 600);
+
+            // Standard commercial brackets
+            const brackets = [9000, 12000, 18000, 24000, 30000, 36000, 48000, 60000];
+            let chosen = brackets.find(b => b >= rawBtu) || 60000;
+
+            recommendedCommercialBtu = chosen.toLocaleString('pt-BR') + ' BTUs';
+            document.getElementById('btuResultValue').textContent = recommendedCommercialBtu;
+            document.getElementById('btuExactCalc').textContent = `Carga térmica calculada: ~${rawBtu.toLocaleString('pt-BR')} BTUs/h`;
+
+            const suggestionEl = document.getElementById('btuModelSuggestion');
+            if (chosen <= 12000) {
+                suggestionEl.innerHTML = `Ideal para quartos e escritórios: <strong>Split Inverter ${recommendedCommercialBtu}</strong>.`;
+            } else if (chosen <= 24000) {
+                suggestionEl.innerHTML = `Ideal para salas amplas e lojas em Araçatuba: <strong>Split Hi-Wall Inverter ${recommendedCommercialBtu}</strong>.`;
+            } else {
+                suggestionEl.innerHTML = `Ideal para grandes ambientes comerciais: <strong>Piso Teto ou Cassete ${recommendedCommercialBtu}</strong>.`;
+            }
+        }
+
+        function sendBtuToQuote() {
+            selectQuickService('Instalação de Ar-Condicionado');
+            const notes = document.getElementById('clientNotes');
+            notes.value = `Calculei no site a potência recomendada de ${recommendedCommercialBtu} para meu ambiente em Araçatuba e gostaria de um orçamento de instalação.`;
+        }
+
+        // 6. Copy Phone & Quote Summary Helpers (Iframe Safe)
+        function copyTextSafe(text) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+        }
+
+        function copyPhoneNumber() {
+            copyTextSafe('18997936585');
+            const btnText = document.getElementById('copyPhoneBtnText');
+            btnText.textContent = 'Número Copiado!';
+            setTimeout(() => {
+                btnText.textContent = 'Copiar Número';
+            }, 2500);
+        }
+
+        function buildQuoteMessage() {
+            const name = document.getElementById('clientName').value.trim() || 'Cliente';
+            const neighborhood = document.getElementById('clientNeighborhood').value.trim() || 'Araçatuba';
+            const service = document.getElementById('serviceType').value;
+            const power = document.getElementById('acPower').value;
+            const notes = document.getElementById('clientNotes').value.trim();
+
+            let msg = `Olá, *DP Ar Condicionado*! Vim pelo site e gostaria de um orçamento:\n\n`;
+            msg += `*Nome:* ${name}\n`;
+            msg += `*Cidade/Bairro:* Araçatuba - ${neighborhood}\n`;
+            msg += `*Serviço:* ${service}\n`;
+            msg += `*Aparelho:* ${power}\n`;
+            if (notes) {
+                msg += `*Detalhes:* ${notes}\n`;
+            }
+            return msg;
+        }
+
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            const msg = buildQuoteMessage();
+            const encoded = encodeURIComponent(msg);
+            const feedback = document.getElementById('quoteFeedback');
+            feedback.textContent = 'Redirecionando para o WhatsApp da DP Ar Condicionado (18 99793-6585) com seu pedido preenchido...';
+            feedback.classList.remove('hidden');
+            window.open(`https://wa.me/5518997936585?text=${encoded}`, '_blank', 'noopener,noreferrer');
+        }
+
+        function copyFormattedQuote() {
+            const msg = buildQuoteMessage();
+            copyTextSafe(msg);
+            const feedback = document.getElementById('quoteFeedback');
+            feedback.textContent = 'Resumo do orçamento copiado para sua área de transferência!';
+            feedback.classList.remove('hidden');
+        }
+
+        // 7. Ambient Frost / Cool Air Particle Canvas
+        function initFrostCanvas() {
+            const canvas = document.getElementById('frostCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+
+            function resize() {
+                width = canvas.width = canvas.offsetWidth;
+                height = canvas.height = canvas.offsetHeight;
+            }
+
+            window.addEventListener('resize', resize);
+            resize();
+
+            for (let i = 0; i < 36; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    r: Math.random() * 2.2 + 0.8,
+                    vx: (Math.random() - 0.5) * 0.4,
+                    vy: Math.random() * 0.55 + 0.2,
+                    alpha: Math.random() * 0.45 + 0.15
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                for (let p of particles) {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.y > height) p.y = -5;
+                    if (p.x > width) p.x = 0;
+                    if (p.x < 0) p.x = width;
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(96, 190, 255, ${p.alpha})`;
+                    ctx.fill();
+                }
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        window.onload = function () {
+            calculateBTU();
+            syncCompareWidth();
+            initFrostCanvas();
+        };
+    </script>
+</body>
+</html>
