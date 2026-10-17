@@ -184,6 +184,19 @@
             animation: airFlowStream 3.7s infinite ease-out 2.2s;
         }
 
+        /* */
+        /* Reading Scroll Progress Bar matching Project Colors */
+        .scroll-progress-track {
+            background: rgba(3, 11, 24, 0.55);
+            backdrop-filter: blur(4px);
+        }
+
+        .scroll-progress-fill {
+            background: linear-gradient(90deg, #1664b8 0%, #2997ff 60%, #67e8f9 92%, #dff2ff 100%);
+            box-shadow: 0 0 14px rgba(41, 151, 255, 0.95), 0 0 6px rgba(103, 232, 249, 0.85);
+            transition: width 0.08s ease-out;
+        }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
@@ -201,6 +214,14 @@
     </style>
 </head>
 <body class="antialiased selection:bg-rh-cyan selection:text-white">
+
+    <!-- -->
+    <!-- Fixed Top Scroll Progress Bar -->
+    <div class="fixed top-0 left-0 right-0 h-1 sm:h-1.5 z-[60] scroll-progress-track pointer-events-none" aria-hidden="true">
+        <div id="scrollProgressBar" class="h-full w-0 scroll-progress-fill rounded-r-full relative">
+            <span class="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_10px_#67e8f9,0_0_20px_#2997ff]"></span>
+        </div>
+    </div>
 
     <!-- Top Location & Urgency Strip -->
     <div class="bg-gradient-to-r from-[#041229] via-[#0c3166] to-[#041229] border-b border-rh-cyan/30 text-[11px] sm:text-sm py-2 px-3 sm:px-4">
@@ -764,7 +785,7 @@
     </section>
 
     <!-- DETAILED TECHNICAL SERVICES SECTION -->
-    <section id="servicos" class="py-12 sm:py-16 lg:py-24 relative border-t border-sky-500/20 bg-[#051329]/70">
+    <section id="servicos" class="scroll-mt-24 py-12 sm:py-16 lg:py-24 relative border-t border-sky-500/20 bg-[#051329]/70">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
                 <span class="text-rh-cyan font-display font-extrabold italic uppercase tracking-widest text-xs sm:text-sm">Soluções Completas em Climatização</span>
@@ -880,7 +901,7 @@
     </section>
 
     <!-- INTERACTIVE RAIO-X DA HIGIENIZAÇÃO (BEFORE & AFTER) -->
-    <section id="higienizacao" class="py-12 sm:py-16 lg:py-24 relative">
+    <section id="higienizacao" class="scroll-mt-24 py-12 sm:py-16 lg:py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
                 
@@ -977,7 +998,7 @@
     </section>
 
     <!-- INTERACTIVE BTU CALCULATOR + SMART SERVICE SIMULATOR -->
-    <section id="calculadora" class="py-12 sm:py-16 lg:py-24 bg-[#051329]/80 border-y border-sky-500/20">
+    <section id="calculadora" class="scroll-mt-24 py-12 sm:py-16 lg:py-24 bg-[#051329]/80 border-y border-sky-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
                 <span class="text-rh-cyan font-display font-extrabold italic uppercase tracking-widest text-xs sm:text-sm">Ferramenta Exclusiva DP Ar Condicionado</span>
@@ -1066,12 +1087,12 @@
     </section>
 
     <!-- ARAÇATUBA COVERAGE & SMART WHATSAPP QUOTE FORM -->
-    <section id="orcamento" class="py-12 sm:py-16 lg:py-24 relative">
+    <section class="py-12 sm:py-16 lg:py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
                 
                 <!-- Left Column: Coverage in Araçatuba & Regional Highlights -->
-                <div id="aracatuba" class="lg:col-span-5 space-y-5 sm:space-y-6 text-center lg:text-left">
+                <div id="aracatuba" class="scroll-mt-24 lg:col-span-5 space-y-5 sm:space-y-6 text-center lg:text-left">
                     <span class="text-rh-cyan font-display font-extrabold italic uppercase tracking-widest text-xs sm:text-sm">Atendimento Local em Araçatuba - SP</span>
                     <h2 class="font-display font-black italic text-2xl sm:text-4xl text-white uppercase leading-tight">
                         ATENDIMENTO ÁGIL EM TODOS OS BAIRROS DE <span class="text-rh-cyan">ARAÇATUBA</span>
@@ -1116,7 +1137,7 @@
 
                 <!-- Right Column: Interactive Quote Generator Form -->
                 <div class="lg:col-span-7">
-                    <div class="flyer-service-card rounded-3xl p-5 sm:p-8 border-2 border-sky-400/50">
+                    <div id="orcamento" class="scroll-mt-24 flyer-service-card rounded-3xl p-5 sm:p-8 border-2 border-sky-400/50 transition-all duration-500">
                         <h3 class="font-display font-black italic text-xl sm:text-3xl text-white uppercase">
                             SOLICITAR <span class="text-rh-cyan">ORÇAMENTO RÁPIDO</span>
                         </h3>
@@ -1253,7 +1274,53 @@
             }
         }
 
-        // 3. Quick Service & Neighborhood Selection for Mobile Convenience
+        // 3. Direct & Centered Scroll to "SOLICITAR ORÇAMENTO RÁPIDO" Card
+        function scrollToQuoteCard(focusInputId = null) {
+            const quoteCard = document.getElementById('orcamento');
+            if (!quoteCard) return;
+
+            const header = document.querySelector('header');
+            const headerHeight = header ? header.offsetHeight : 72;
+            const rect = quoteCard.getBoundingClientRect();
+            const absoluteTop = window.pageYOffset + rect.top;
+            const availableViewport = window.innerHeight - headerHeight;
+
+            // Centraliza o card na área útil abaixo do menu fixo (ou alinha o título no topo se a tela for muito pequena)
+            let targetScrollY;
+            if (rect.height < availableViewport - 24) {
+                targetScrollY = absoluteTop - headerHeight - ((availableViewport - rect.height) / 2);
+            } else {
+                targetScrollY = absoluteTop - headerHeight - 14;
+            }
+
+            window.scrollTo({
+                top: Math.max(0, targetScrollY),
+                behavior: 'smooth'
+            });
+
+            // Destaque luminoso rápido para guiar a atenção diretamente para o formulário
+            quoteCard.classList.add('ring-4', 'ring-sky-400/70');
+            setTimeout(() => {
+                quoteCard.classList.remove('ring-4', 'ring-sky-400/70');
+            }, 1400);
+
+            if (focusInputId) {
+                const inputEl = document.getElementById(focusInputId);
+                if (inputEl) {
+                    setTimeout(() => inputEl.focus({ preventScroll: true }), 600);
+                }
+            }
+        }
+
+        // Intercepta todos os links "#orcamento" para centralizar direto no card de orçamento
+        document.querySelectorAll('a[href="#orcamento"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleMobileMenu(true);
+                scrollToQuoteCard('clientName');
+            });
+        });
+
         function selectQuickService(serviceName) {
             const selectEl = document.getElementById('serviceType');
             for (let i = 0; i < selectEl.options.length; i++) {
@@ -1262,15 +1329,13 @@
                     break;
                 }
             }
-            document.getElementById('orcamento').scrollIntoView({ behavior: 'smooth' });
-            const clientNameInput = document.getElementById('clientName');
-            setTimeout(() => clientNameInput.focus({ preventScroll: true }), 650);
+            scrollToQuoteCard('clientName');
         }
 
         function selectNeighborhood(neighborhoodName) {
             const inputEl = document.getElementById('clientNeighborhood');
             inputEl.value = neighborhoodName;
-            document.getElementById('orcamento').scrollIntoView({ behavior: 'smooth' });
+            scrollToQuoteCard('clientName');
         }
 
         // 4. Before & After Higienização Slider (Synced Width + Direct Touch Dragging)
@@ -1456,10 +1521,24 @@
             animate();
         }
 
+        // 8. Top Reading Scroll Progress Bar Logic
+        const scrollProgressBar = document.getElementById('scrollProgressBar');
+        function updateScrollProgress() {
+            if (!scrollProgressBar) return;
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
+            scrollProgressBar.style.width = progress + '%';
+        }
+
+        window.addEventListener('scroll', updateScrollProgress, { passive: true });
+        window.addEventListener('resize', updateScrollProgress);
+
         window.onload = function () {
             calculateBTU();
             syncCompareWidth();
             initFrostCanvas();
+            updateScrollProgress();
         };
     </script>
 </body>
